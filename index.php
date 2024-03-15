@@ -1,10 +1,6 @@
 <?php
 
-require "bootstrap.php";
+require "core/bootstrap.php";
 
-
-$users = $query->selectAll("users");
-
-dd($users);
-
-require "index.view.php";
+require Router::load("routes.php")
+                ->direct(Request::uri());
