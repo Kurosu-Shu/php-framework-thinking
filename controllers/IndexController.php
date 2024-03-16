@@ -1,5 +1,7 @@
 <?php
 
-$tasks = $query->selectAll("tasks");
+$users = $database->selectAll("users");
 
-require "views/index.view.php";
+view("index", [
+    "users" => $users
+]);

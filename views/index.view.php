@@ -1,23 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php require "partials/heading.php"; ?>
+    
+    <h1>Usernames</h1>
+    <ul>
+        <?php foreach($users as $user):?>
+            <li> <?= $user->name?> </li>
+        <?php endforeach; ?>
+    </ul>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-</head>
+    <h1>create user</h1>
+    <form action="/users" method="POST">
+        <input type="text" name="name" />
+        <button type="submit">Create</button>
+    </form>
 
-<body>
-    <h1>My Todo List</h1>
-    <?php foreach ($tasks as $task) : ?>
-        <?php
-        if ($task->complete) {
-            echo "<strike>$task->description</strike> <br>";
-        } else {
-            echo "<p> $task->description </p> <br>";
-        }
-        ?>
-    <?php endforeach; ?>
-</body>
-
-</html>
+<?php require "partials/footer.php"; ?>
