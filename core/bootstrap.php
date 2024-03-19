@@ -1,5 +1,6 @@
 <?php
 
+use core\App;
 require "functions.php";
 
 App::bind("config", require "config.php");

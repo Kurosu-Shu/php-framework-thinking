@@ -8,7 +8,7 @@
     </ul>
 
     <h1>create user</h1>
-    <form action="/users" method="POST">
+    <form action="/names" method="POST">
         <input type="text" name="name" />
         <button type="submit">Create</button>
     </form>
